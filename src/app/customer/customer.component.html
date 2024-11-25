@@ -1,0 +1,21 @@
+<p>customer works!</p>
+<p>Title</p>
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Address</th>
+    </thead>
+    <tbody *ngFor="let cus of customers">
+        <td>{{cus.name}}</td>
+        <td>{{cus.address}}</td>
+        <td><button (click)="fetchCustomerInfo(cus.id)">Edit</button></td>
+    </tbody>
+</table>
+<!-- <ul *ngFor="let cus of customers">
+    <li>{{cus.name}}</li>
+</ul> -->
+
+<!-- <p>customer End</p> -->
+
+

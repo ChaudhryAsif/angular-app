@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { PostService } from './service/post.service';
 import { CommonModule } from '@angular/common';
+import { CustomerComponent } from './customer/customer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CustomerComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   providers: [PostService]
@@ -19,7 +20,7 @@ public posts: any;
 ngOnInit(){
    this.post.getPosts().subscribe(response => {
     this.posts = response;
-    console.log('response', response)
+    //console.log('response', response)
   })
 }
 
